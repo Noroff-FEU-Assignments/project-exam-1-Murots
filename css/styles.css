@@ -1,0 +1,154 @@
+@import "imports/variables.css";
+
+/* Global
+-------------------------------------------------------------------------------------------------- */
+body {
+    margin: 0px;
+}
+
+main {
+    margin: 0px 30px;
+}
+
+h1, 
+h2 {
+    font-family: var(--text-heading), Verdana, Geneva, Tahoma;
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: 500;
+    letter-spacing: 0.10em;
+}
+
+p {
+    font-family: var(--text-paragraph), Verdana, Geneva, Tahoma;
+    font-size: 0.9375em;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    color: var(--color-darkGrey);
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    margin: 100px auto;
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    grid-template-rows: 88% 12%;
+    margin: 100px 0px 0px 0px;
+    height: 177px;
+    background-color: var(--color-lightGray);
+    position: relative;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin-right: 30px;
+}
+
+.footer-links {
+    text-align: left;
+}
+
+.footer-links a,
+.footer-links p,
+.copyright {
+    display: block;
+    color: var(--color-footerGrey);
+    font-family: var(--text-paragraph);
+    font-size: 0.8125em;
+    letter-spacing: 0.03em;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-links p {
+    margin: 20px 0px 5px 0px;
+}
+
+.soMe-links {
+    display: flex;
+}
+
+.soMe-links a {
+    margin: 0px 10px 0px 0px;
+}
+
+hr {
+    margin: 0;
+    border-top: 1px solid var(--color-footerStyle);   
+    grid-column: 1/-1;
+}
+
+.copyright {
+    grid-row: 2;
+    margin: 0;
+    text-align: center;
+    align-self: center;    
+}
+
+
+
+
+/* Index
+-------------------------------------------------------------------------------------------------- */
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: 0px;
+}
+
+.slider-container img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    padding-bottom: 3px;
+}
+
+.introduction {
+    text-align: center;
+}
+
+.introduction h2 span {
+    color: var(--color-darkGrey);
+    text-transform: uppercase;
+}
+
+.introduction-link p,
+.introduction-link a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.introduction-link a {
+  text-decoration: none;
+  color: var(--color-ctaGreen);
+  font-weight: 600;
+}
+
+.introduction-img {
+    display: none;
+}
+
