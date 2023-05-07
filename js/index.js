@@ -20,12 +20,26 @@ async function createSliderHTML(latestPost) {
     const featuredImage = await response.json();
 
     const slideImage = featuredImage.source_url;
-    console.log(featuredImage.source_url);
 
     const slide = document.createElement("div");
     slide.className = "slide-image";
     slide.style.backgroundImage = `url(${slideImage})`;
+    slide.setAttribute("alt", featuredImage.alt_text);
     slider.append(slide);
+
+    const slideTextContent = document.createElement("div");
+    slideTextContent.className = "slide-textContent";
+    slide.append(slideTextContent);
+
+    const slideTextLatest = document.createElement("h3");
+    slideTextLatest.className = "slide-textLatest";
+    slideTextLatest.innerText = "Latest posts:";
+    slideTextContent.append(slideTextLatest);
+
+    const slideTitle = document.createElement("h1");
+    slideTitle.className = "slide-title";
+    slideTitle.innerText = latestPost.title.rendered;
+    slideTextContent.append(slideTitle);
 
     const sliderButtonPrev = document.querySelector('.slider-button-prev');
     const sliderButtonNext = document.querySelector('.slider-button-next');
