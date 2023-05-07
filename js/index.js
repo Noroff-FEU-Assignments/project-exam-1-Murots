@@ -13,24 +13,12 @@ async function getLatestPosts() {
     return latestPosts;
 }
 
-
-async function createFeaturedListHTML(latestPost) {
+async function createSliderHTML(latestPost) {
     const featuredImageId = latestPost.featured_media;
     const featuredImageURL = apiBase + "wp-json/wp/v2/media/" + featuredImageId;
     const response = await fetch(featuredImageURL);
     const featuredImage = await response.json();
-    // console.log(featuredImage);
-    // return featuredImage;
 
-
-// }
-
-// async function mainFeature() {
-//     const featuredImage = await createFeaturedListHTML();
-//     createSliderHTML(featuredImage);
-// }    
-
-// function createSliderHTML(featuredImage) {
     const slideImage = featuredImage.source_url;
     console.log(featuredImage.source_url);
 
@@ -39,43 +27,97 @@ async function createFeaturedListHTML(latestPost) {
     slide.style.backgroundImage = `url(${slideImage})`;
     slider.append(slide);
 
-
+    const sliderButtonPrev = document.querySelector('.slider-button-prev');
+    const sliderButtonNext = document.querySelector('.slider-button-next');
     const sliderDots = document.querySelectorAll('.slider-dot');
-    for (let i = 0; i < sliderDots.length; i++) {
-        const dot = sliderDots[i];
-    
-        dot.addEventListener('click', function() {
+    let currentSlide = 0;
+    sliderButtonPrev.disabled = true;
+    let ongoingAnimation = false;
 
-        slider.scroll({
-            left: i * slider.offsetWidth,
+    sliderButtonPrev.addEventListener('click', function() {
+        if (ongoingAnimation) {
+            return;
+        }
+
+        ongoingAnimation = true;
+
+        slider.scrollBy({
+            left: -slider.offsetWidth,
             behavior: 'smooth'
         });
 
-        for (let i = 0; i < sliderDots.length; i++) {
-            const otherDot = sliderDots[i];
-            otherDot.classList.remove('active');
+        sliderDots[currentSlide].classList.remove('active');
+        currentSlide -= 1;
+
+        if (currentSlide < 0) {
+            currentSlide = sliderDots.length - 1;
         }
 
-        dot.classList.add('active');
-  
+        sliderDots[currentSlide].classList.add('active');
+
+        if (currentSlide === 0) {
+            sliderButtonPrev.disabled = true;
+        } else {
+            sliderButtonPrev.disabled = false;
+        }
+
+        if (sliderButtonNext.disabled) {
+            sliderButtonNext.disabled = false;
+        }
+
+        setTimeout(function() {
+            ongoingAnimation = false;
+        }, 500);
+    });
+
+    sliderButtonNext.addEventListener('click', function() {
+        if (ongoingAnimation) {
+            return;
+        }
+
+        ongoingAnimation = true;
+
+        slider.scrollBy({
+            left: slider.offsetWidth,
+            behavior: 'smooth'
         });
-    }
+
+        sliderDots[currentSlide].classList.remove('active');
+        currentSlide += 1;
+
+        if (currentSlide >= sliderDots.length) {
+            currentSlide = 0;
+        }
+
+        sliderDots[currentSlide].classList.add('active');
+
+        if (currentSlide === sliderDots.length - 1) {
+            sliderButtonNext.disabled = true;
+        } else {
+            sliderButtonNext.disabled = false;
+        }
+
+        if (sliderButtonPrev.disabled) {
+            sliderButtonPrev.disabled = false;
+        }
+
+        setTimeout(function() {
+            ongoingAnimation = false;
+        }, 500);
+    });
 }
-    
-// }
 
 function createLatestPostsHTML(latestPosts) {
-    for (let i = 0; i < latestPosts.length; i++) {
-        const latestPost = latestPosts[i];
-        console.log(latestPost);
-        createFeaturedListHTML(latestPost);
-    }
+  for (let i = 0; i < latestPosts.length; i++) {
+    const latestPost = latestPosts[i];
+    console.log(latestPost);
+    createSliderHTML(latestPost);
+  }
 }
 
 async function main() {
-    const latestPosts = await getLatestPosts();
-    createLatestPostsHTML(latestPosts);
+  const latestPosts = await getLatestPosts();
+  createLatestPostsHTML(latestPosts);
 }
 
 main();
-
