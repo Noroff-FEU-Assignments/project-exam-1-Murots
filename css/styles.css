@@ -6,6 +6,10 @@ body {
     margin: 0px;
 }
 
+header {
+    height: fit-content;
+}
+
 main {
     margin: 0px 30px;
 }
@@ -52,6 +56,10 @@ p {
     color: var(--color-darkGrey);
 }
 
+.noBanner-header {
+    min-height: 60px;
+}
+
 .hamburger-menu {
     position: absolute;
     top: 20px;
@@ -66,16 +74,24 @@ p {
     height: 19px;
 } */
 
-.menu-container {
+.menu-container,
+.menu-container2 {
     position: absolute;
     top: 0px;
     height: 100vh;
     width: 150px;
-    background-color: rgba(0, 0, 0, 0.8);
     border: none;
     z-index: 3;
     animation-name: sidemenu;
     animation-duration: 0.5s;
+}
+
+.menu-container {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-container2 {
+    background-color: rgba(233, 231, 231, 0.8);
 }
 
 @keyframes sidemenu {
@@ -88,8 +104,8 @@ p {
     }
 }
 
-.menu-links {
-    color: #ffffff;
+.menu-links,
+.menu-links2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 0.9375em;
@@ -99,17 +115,33 @@ p {
     text-decoration: none;
 }
 
-.menu-linksBlogs {
+.menu-links {
+    color: #ffffff;
+}
+
+.menu-links2 {
+    color: var(--color-footerGrey);
+}
+
+.menu-linksMargin {
     margin-top: 140px;
 }
 
-.nav-heading {
+.nav-heading,
+.nav-heading2 {
     position: absolute;
-    color: #ffffff;
     top: 20px;
     margin: 0px auto;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.nav-heading {
+    color: #ffffff;
+}
+
+.nav-heading2 {
+    color: var(--color-footerGrey);
 }
 
 .logo-container {
@@ -342,3 +374,34 @@ hr {
     display: none;
 }
 
+
+/* Blogs
+-------------------------------------------------------------------------------------------------- */
+
+.blogList-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.blog-container {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 5%;
+}
+
+/* .blog-container::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+} */

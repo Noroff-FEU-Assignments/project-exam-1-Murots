@@ -1,24 +1,36 @@
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const sliderContainer = document.querySelector(".slider-container");
+const headerContainer = document.querySelector("header");
 let menuContainer = null;
 
-hamburgerMenu.addEventListener('click', function() {
+hamburgerMenu.addEventListener("click", function() {
     if (!menuContainer) {
         menuContainer = document.createElement("div");
-        menuContainer.className = "menu-container";
-        sliderContainer.append(menuContainer);
+        // sliderContainer.append(menuContainer);
 
-        const navBlogs = document.createElement("a");
-        navBlogs.classList = "menu-links menu-linksBlogs";
-        navBlogs.href = "../../blogs.html";
-        navBlogs.innerText = "BLOGS";
-        menuContainer.append(navBlogs);
+        const navLink1 = document.createElement("a");
+        menuContainer.append(navLink1);
 
-        const navAbout = document.createElement("a");
-        navAbout.className = "menu-links";
-        navAbout.href = "../../about.html";
-        navAbout.innerText = "ABOUT";
-        menuContainer.append(navAbout);
+        const navLink2 = document.createElement("a");
+        navLink2.href = "../../about.html";
+        navLink2.innerText = "ABOUT";
+        menuContainer.append(navLink2);
+
+        if (sliderContainer) {
+            sliderContainer.append(menuContainer);
+            menuContainer.className = "menu-container";
+            navLink1.classList = "menu-links menu-linksMargin";
+            navLink1.href = "../../blogs.html";
+            navLink1.innerText = "BLOGS";
+            navLink2.className = "menu-links";
+        } else {
+            headerContainer.append(menuContainer);
+            menuContainer.className = "menu-container2";
+            navLink1.classList = "menu-links2 menu-linksMargin";
+            navLink1.href = "../../index.html";
+            navLink1.innerText = "HOME";
+            navLink2.className = "menu-links2";
+        }
     } else {
         menuContainer.remove();
         menuContainer = null;
@@ -27,26 +39,9 @@ hamburgerMenu.addEventListener('click', function() {
     
 });
 
-
-// if (menuContainer) {
-//     window.addEventListener('click', function() {
-//         menuContainer.remove();
-//         menuContainer = null;
-// });
-// }
-
-
-// window.addEventListener('click', function(event) {
-//   if (menuContainer && !event.target.closest('.menu-container') && !event.target.closest('.hamburger-menu')) {
-//     menuContainer.remove();
-//     menuContainer = null;
-//   }
-// });
-
-window.addEventListener('click', function(event) {
-    if (menuContainer && event.target.closest('.slider-container') && !event.target.closest('.hamburger-menu')) {
-      menuContainer.remove();
-      menuContainer = null;
+window.addEventListener("click", function(event) {
+    if (menuContainer && !event.target.closest(".menu-container") && !event.target.closest(".hamburger-menu")) {
+        menuContainer.remove();
+        menuContainer = null;
     }
-  });
-  
+});
