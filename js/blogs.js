@@ -1,5 +1,4 @@
 const blogListContainer = document.querySelector(".blogList-container");
-// const blogContainer = document.querySelector(".blog-container");
 
 const apiBase = "https://bringthebugsback.murots.no/";
 const blogsBase = "wp-json/wp/v2/posts";
@@ -16,11 +15,6 @@ async function getLatestBlogs() {
 
 async function createBlogListHTML(latestBlog) {
 
-    // const blogContainer = document.createElement("div");
-    // blogContainer.className = "blog-container";
-    // blogListContainer.append(blogContainer);
-
-    
     const featuredImageId = latestBlog.featured_media;
     const featuredImageURL = apiBase + "wp-json/wp/v2/media/" + featuredImageId;
     const response = await fetch(featuredImageURL);
@@ -34,20 +28,19 @@ async function createBlogListHTML(latestBlog) {
     blogContainer.setAttribute("alt", featuredImage.alt_text);
     blogListContainer.append(blogContainer);
 
-    // const slideTextContent = document.createElement("div");
-    // slideTextContent.className = "slide-textContent";
-    // slide.append(slideTextContent);
+    const TextContent = document.createElement("div");
+    TextContent.className = "blogContainer-textContent";
+    blogContainer.append(TextContent);
 
-    // const slideTextLatest = document.createElement("h4");
-    // slideTextLatest.className = "slide-textLatest";
-    // slideTextLatest.innerText = "Latest posts:";
-    // slideTextContent.append(slideTextLatest);
+    const blogTitle = document.createElement("h1");
+    blogTitle.className = "blogContainer-title";
+    blogTitle.innerText = latestBlog.title.rendered;
+    TextContent.append(blogTitle);
 
-    // const slideTitle = document.createElement("h1");
-    // slideTitle.className = "slide-title";
-    // slideTitle.innerText = latestPost.title.rendered;
-    // slideTextContent.append(slideTitle);
-
+    const readMore = document.createElement("h4");
+    readMore.className = "blogContainer-readMore";
+    readMore.innerText = "Read more...";
+    TextContent.append(readMore);
 }
 
 function createLatestBlogsHTML(latestBlogs) {
