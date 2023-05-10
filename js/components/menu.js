@@ -20,7 +20,7 @@ hamburgerMenu.addEventListener("click", function() {
             sliderContainer.append(menuContainer);
             menuContainer.className = "menu-container";
             navLink1.classList = "menu-links menu-linksMargin";
-            navLink1.href = "../../blogs.html";
+            navLink1.href = "../../blogList.html";
             navLink1.innerText = "BLOGS";
             navLink2.className = "menu-links";
         } else {
