@@ -1,6 +1,7 @@
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const sliderContainer = document.querySelector(".slider-container");
-const headerContainer = document.querySelector("header");
+const noHeaderContainer = document.querySelector(".noBanner-header");
+const featuredContainer = document.querySelector(".featured-container");
 let menuContainer = null;
 
 hamburgerMenu.addEventListener("click", function() {
@@ -23,14 +24,22 @@ hamburgerMenu.addEventListener("click", function() {
             navLink1.href = "../../blogList.html";
             navLink1.innerText = "BLOGS";
             navLink2.className = "menu-links";
+        } else if (featuredContainer) {
+            featuredContainer.append(menuContainer);
+            menuContainer.className = "menu-container";
+            navLink1.classList = "menu-links menu-linksMargin";
+            navLink1.href = "../../index.html";
+            navLink1.innerText = "HOME";
+            navLink2.className = "menu-links";
         } else {
-            headerContainer.append(menuContainer);
+            noHeaderContainer.append(menuContainer);
             menuContainer.className = "menu-container2";
             navLink1.classList = "menu-links2 menu-linksMargin";
             navLink1.href = "../../index.html";
             navLink1.innerText = "HOME";
             navLink2.className = "menu-links2";
         }
+        
     } else {
         menuContainer.remove();
         menuContainer = null;

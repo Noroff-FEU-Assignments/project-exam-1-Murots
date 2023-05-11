@@ -67,6 +67,7 @@ p {
     background-color: rgba(0, 0, 0, 0.0);
     border: none;
     z-index: 100;
+    cursor: pointer;
 }
 
 /* .hamburger-menu img:hover {
@@ -87,11 +88,11 @@ p {
 }
 
 .menu-container {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .menu-container2 {
-    background-color: rgba(233, 231, 231, 0.8);
+    background-color: rgba(233, 231, 231, 0.9);
 }
 
 @keyframes sidemenu {
@@ -233,8 +234,6 @@ hr {
     display: flex;
     overflow: hidden;
     position: relative;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
 }
 
 .slider::before {
@@ -313,6 +312,7 @@ hr {
 
 .slider-buttons img:hover  {
     opacity: 1;
+    cursor: pointer;
 }
 
 .slider-buttons img:active  {
@@ -340,7 +340,6 @@ hr {
     border-radius: 50%;
     background-color: #ffffff;
     margin: 0 7px;
-    cursor: pointer;
 }
   
 .slider-dot.active {
@@ -423,4 +422,27 @@ hr {
 .blogContainer-title {
     color: #ffffff;
     margin: 5px 30px;
+}
+
+
+/* BlogDetails
+-------------------------------------------------------------------------------------------------- */
+
+.featured-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;;
+    display: flex;
+    position: relative;
+
+}
+
+.featured-container::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
