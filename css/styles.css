@@ -70,11 +70,6 @@ p {
     cursor: pointer;
 }
 
-/* .hamburger-menu img:hover {
-    width: 22px;
-    height: 19px;
-} */
-
 .menu-container,
 .menu-container2 {
     position: absolute;
@@ -431,10 +426,9 @@ hr {
 .featured-container {
     width: 100%;
     height: 100vh;
-    margin: 0px;;
+    margin: 0px;
     display: flex;
     position: relative;
-
 }
 
 .featured-container::before {
@@ -446,3 +440,49 @@ hr {
     left: 0px;
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+.blogDetails-title {
+    color: var(--color-darkGrey);
+    margin: 100px 0px 10px 0px;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    
+}
+
+.blog-content h2 {
+    margin-top: 50px;
+    color: var(--color-darkGrey);
+}
+
+.wp-block-image {
+    margin: 50px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+}
+
+.wp-block-video {
+    margin: 50px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-content video {
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+

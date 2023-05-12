@@ -24,6 +24,9 @@ async function createPostDetailsHTML(postDetails) {
     const response = await fetch(featuredImageURL);
     const featuredImage = await response.json();
 
+    const detailsHeading = document.querySelector("#dynamic-detailsHeading");
+    detailsHeading.innerText = postDetails.title.rendered.charAt(0).toUpperCase() + postDetails.title.rendered.slice(1).toLowerCase();
+    
     const postFeaturedImage = featuredImage.source_url;
 
     const bannerImage = document.createElement("div");
@@ -33,10 +36,12 @@ async function createPostDetailsHTML(postDetails) {
     featuredContainer.append(bannerImage);
 
     const blogTitle = document.createElement("h1");
+    blogTitle.className = "blogDetails-title";
     blogTitle.innerText = postDetails.title.rendered;
     contentContainer.append(blogTitle);
 
     const blogContent = document.createElement("div");
+    blogContent.className = "blog-content";
     blogContent.innerHTML = postDetails.content.rendered;
     contentContainer.append(blogContent);
 }
