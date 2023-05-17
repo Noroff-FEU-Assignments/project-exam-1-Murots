@@ -48,6 +48,14 @@ async function createSliderHTML(latestPost) {
     sliderButtonPrev.disabled = true;
     let ongoingAnimation = false;
 
+    const blogId = latestPost.id;
+
+    const readNowButton = document.createElement("a");
+    readNowButton.className = "readNow-button";
+    readNowButton.href = "blogDetails.html?id=" + blogId;
+    readNowButton.innerText = "Read now"
+    slideTextContent.append(readNowButton);
+
     sliderButtonPrev.addEventListener('click', function() {
         if (ongoingAnimation) {
             return;

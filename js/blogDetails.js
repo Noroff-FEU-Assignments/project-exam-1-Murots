@@ -43,7 +43,9 @@ async function createPostDetailsHTML(postDetails) {
     const blogContent = document.createElement("div");
     blogContent.className = "blog-content";
     blogContent.innerHTML = postDetails.content.rendered;
+    console.log(postDetails.content.rendered);
     contentContainer.append(blogContent);
+    
 }
 
 async function main() {
