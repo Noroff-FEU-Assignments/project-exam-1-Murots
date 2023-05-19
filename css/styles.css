@@ -146,7 +146,10 @@ p {
 
 .logo {
     margin: 100px auto;
-    text-align: center;
+}
+
+.logo-alt {
+    margin-top: 50px;
 }
 
 footer {
@@ -391,7 +394,7 @@ hr {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .blog-container {
@@ -576,13 +579,8 @@ hr {
 /* Contact
 --------------------------------------------------------------------------------------------------- */
 
-.contact-header {
-    margin-top: 30px;
-}
-
-.contact_wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
+.contact-welcome {
+    margin: 30px;
 }
 
 .contact  {
@@ -601,10 +599,10 @@ hr {
 .contact__form input,
 .contact__form textarea {
     border-radius: 6px;
-    border-color: #E8E8E8;
+    border-color: var(--color-lightGray);
     border-style: solid;
     border-width: 0.7px;
-    font-family: 'Source Sans Pro', sans-serif, Verdana, Geneva, Tahoma;
+    font-family: var(--text-paragraph), Verdana, Geneva, Tahoma;
 }
 
 .contact__form input {
@@ -617,19 +615,30 @@ hr {
     width: 100%;
 }
 
-.contact-cta {
+.submit-button {
     margin: 25px; 
-    width: 207px;
+    width: 200px;
     height: 40px;
     justify-self: center;
-}
-
-.contact-note {
-    font-size: 0.875em;
-    margin: auto 0px 60px 0px; 
+    background-color: var(--color-ctaGreen);
+    border-style: none;
+    border-radius: 7px;
+    color: #fff;
+    font-family: var(--text-heading), Verdana, Geneva, Tahoma; 
+    font-weight: 500;
+    font-size: 1em;
 }
 
 .form-error {
     color: #bd0000;
     display: none;
+}
+
+.success {
+    background-color: #c6f7c6;
+    padding: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #008000;
+    max-width: 500px;
 }

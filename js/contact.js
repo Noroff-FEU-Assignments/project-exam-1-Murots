@@ -14,25 +14,25 @@ const guide = document.querySelector(".contact-welcome");
 function validateForm(event) {
     event.preventDefault();
 
-    if (checkLength(firstName.value, 0) === true) {
+    if (checkLength(firstName.value, 2) === true) {
         firstNameError.style.display = "none";
     } else {
         firstNameError.style.display = "block";
     }
 
-    if (checkLength(lastName.value, 3) === true) {
+    if (checkLength(lastName.value, 4) === true) {
         lastNameError.style.display = "none";
     } else {
         lastNameError.style.display = "block";
     }
 
-    if (checkLength(subject.value, 9) === true) {
+    if (checkLength(subject.value, 14) === true) {
         subjectError.style.display = "none";
     } else {
         subjectError.style.display = "block";
     }
     
-    if (checkLength(formMessage.value, 19) === true) {
+    if (checkLength(formMessage.value, 24) === true) {
         formMessageError.style.display = "none";
     } else {
         formMessageError.style.display = "block";
@@ -44,7 +44,7 @@ function validateForm(event) {
         emailError.style.display = "block";
     }
 
-    if (checkLength(firstName.value, 0) && checkLength(lastName.value, 3) && checkLength(subject.value, 9) && checkLength(formMessage.value, 19) && validateEmail(email.value)) {
+    if (checkLength(firstName.value, 2) && checkLength(lastName.value, 4) && checkLength(subject.value, 14) && checkLength(formMessage.value, 24) && validateEmail(email.value)) {
         firstName.value = "";
         lastName.value = "";
         subject.value = "";
