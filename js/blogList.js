@@ -30,12 +30,6 @@ async function createPostListHTML(latestPost) {
     blogContainer.href = "blogDetails.html?id=" + blogId;
     blogListContainer.append(blogContainer);
 
-    // const productId = product.id;
-    // const productContainer = document.createElement("a");
-    // productContainer.classList.add("game-selection__specific");
-    // // productContainer.id = product.id;
-    // productContainer.href = "products.html?id=" + productId;
-
     const TextContent = document.createElement("div");
     TextContent.className = "blogContainer-textContent";
     blogContainer.append(TextContent);
@@ -62,6 +56,8 @@ function createLatestPostsHTML(latestPosts) {
 async function main() {
     const latestPosts = await getLatestPosts();
     createLatestPostsHTML(latestPosts);
+    const loaderDiv = document.querySelector(".loader");
+    loaderDiv.remove();
 }
   
 main();

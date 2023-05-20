@@ -85,8 +85,8 @@ async function main() {
     const title = document.querySelector("title");
     title.innerText = "Bring the bugs back | " + postDetails.title.rendered;
     createPostDetailsHTML(postDetails);
-    // const loaderDiv = document.querySelector(".loader");
-    // loaderDiv.remove();
+    const loaderDiv = document.querySelector(".loader");
+    loaderDiv.remove();
 }
 
 main();

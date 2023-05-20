@@ -130,16 +130,18 @@ async function createSliderHTML(latestPost) {
 }
 
 function createLatestPostsHTML(latestPosts) {
-  for (let i = 0; i < latestPosts.length; i++) {
-    const latestPost = latestPosts[i];
-    console.log(latestPost);
-    createSliderHTML(latestPost);
-  }
+    for (let i = 0; i < latestPosts.length; i++) {
+        const latestPost = latestPosts[i];
+        console.log(latestPost);
+        createSliderHTML(latestPost);
+    }
 }
 
 async function main() {
-  const latestPosts = await getLatestPosts();
-  createLatestPostsHTML(latestPosts);
+    const latestPosts = await getLatestPosts();
+    createLatestPostsHTML(latestPosts);
+    const loaderDiv = document.querySelector(".loader");
+    loaderDiv.remove();
 }
 
 main();
