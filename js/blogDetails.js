@@ -28,6 +28,7 @@ async function createPostDetailsHTML(postDetails) {
     detailsHeading.innerText = postDetails.title.rendered.charAt(0).toUpperCase() + postDetails.title.rendered.slice(1).toLowerCase();
     
     const postFeaturedImage = featuredImage.source_url;
+    const featuredContainer = document.querySelector(".featured-container");
 
     const bannerImage = document.createElement("div");
     bannerImage.className = "slide-image";
@@ -45,6 +46,37 @@ async function createPostDetailsHTML(postDetails) {
     blogContent.innerHTML = postDetails.content.rendered;
     console.log(postDetails.content.rendered);
     contentContainer.append(blogContent);
+
+    const overlay = document.createElement("div");
+    overlay.className = "fullscreen-overlay";
+    contentContainer.append(overlay);
+
+    const images = blogContent.querySelectorAll("img");
+    const videos = blogContent.querySelectorAll("video");
+  
+    images.forEach(function(image) {
+        image.addEventListener("click", function() {
+            image.classList.toggle("fullscreen");
+            document.body.classList.toggle("fullscreen-active");
+            if (image.classList.contains("fullscreen")) {
+                overlay.style.display = "block";
+            } else {
+                overlay.style.display = "none";
+            }
+        });
+    });
+
+    videos.forEach(function(video) {
+        video.addEventListener("click", function() {
+            video.classList.toggle("fullscreen");
+            document.body.classList.toggle("fullscreen-active");
+            if (video.classList.contains("fullscreen")) {
+                overlay.style.display = "block";
+            } else {
+                overlay.style.display = "none";
+            }
+        });
+    });
     
 }
 
