@@ -33,7 +33,8 @@ h2 {
 h3,
 h4,
 p,
-a {
+a,
+li {
     font-family: var(--text-paragraph), Verdana, Geneva, Tahoma;
 }
 
@@ -49,7 +50,8 @@ h4 {
     letter-spacing: 0.03em;
 }
 
-p {
+p,
+li {
     font-size: 0.9375em;
     font-weight: 300;
     letter-spacing: 0.03em;
@@ -87,7 +89,7 @@ p {
 }
 
 .menu-container2 {
-    background-color: rgba(233, 231, 231, 0.9);
+    background-color: rgba(233, 231, 231, 0.95);
 }
 
 @keyframes sidemenu {
@@ -105,7 +107,7 @@ p {
     text-align: center;
     margin-bottom: 30px;
     font-size: 0.9375em;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.05em;
     display: block;
     text-decoration: none;
@@ -152,6 +154,11 @@ p {
     margin-top: 50px;
 }
 
+.logo,
+.logo-alt {
+    max-width: 270px;
+}
+
 footer {
     display: grid;
     grid-template-rows: 88% 12%;
@@ -196,6 +203,12 @@ footer {
 
 .footer-links p {
     margin: 20px 0px 5px 0px;
+}
+
+.menu-links:hover,
+.menu-links2:hover,
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
 .soMe-links {
@@ -327,6 +340,15 @@ hr {
     text-decoration: none;
 }
 
+.readNow-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1px 1px rgba(248, 255, 58, 0.8);
+}
+
+.readNow-button:active {
+    background-color: #4d6128;
+}
+
 .slider-buttons {
     position: absolute;
     display: flex;
@@ -419,6 +441,10 @@ hr {
   font-weight: 600;
 }
 
+.introduction-link a:hover {
+    text-decoration: underline;
+  }
+
 .introduction-img {
     display: none;
 }
@@ -464,14 +490,36 @@ hr {
     top: 50px;
     width: max-content;
     max-width: 100%;
-    
-    
 }
 
 .blogContainer-readMore,
 .blogContainer-title {
     color: #ffffff;
     margin: 5px 30px;
+}
+
+.loadMore-button {
+    margin: 25px auto 0px auto;
+    display: block;
+    width: 150px;
+    height: 35px;
+    background-color: var(--color-ctaGreen);
+    border-style: none;
+    border-radius: 7px;
+    color: #fff;
+    font-family: var(--text-heading), Verdana, Geneva, Tahoma; 
+    font-weight: 500;
+    font-size: 1em; 
+}
+
+.loadMore-button:hover,
+.blog-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px 2px rgba(77, 97, 40, 0.5);
+}
+
+.loadMore-button:active {
+    background-color: #4d6128;
 }
 
 
@@ -551,6 +599,12 @@ hr {
     max-width: 700px;
     height: auto;
     margin-bottom: -10%;
+}
+
+.wp-block-image:hover,
+.wp-block-cover:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px 2px rgba(77, 97, 40, 0.5);
 }
 
 .fullscreen {
@@ -653,8 +707,8 @@ hr {
 
 .submit-button {
     margin: 25px; 
-    width: 200px;
-    height: 40px;
+    width: 150px;
+    height: 35px;
     justify-self: center;
     background-color: var(--color-ctaGreen);
     border-style: none;
@@ -663,6 +717,20 @@ hr {
     font-family: var(--text-heading), Verdana, Geneva, Tahoma; 
     font-weight: 500;
     font-size: 1em;
+}
+
+.submit-button:hover,
+.contact__form input:hover,
+.contact__form textarea:hover {
+    box-shadow: 0 0 2px 2px rgba(77, 97, 40, 0.5);
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.submit-button:active {
+    background-color: #4d6128;
 }
 
 .form-error {
