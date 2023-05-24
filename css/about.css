@@ -1,0 +1,31 @@
+/* About
+-------------------------------------------------------------------------------------------------- */
+
+.about-container img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+}
+
+.about-container h2 {
+    margin-top: 50px;
+}
+
+.background-container {
+    background-color: var(--color-divider);
+    margin: 0px -30px;
+    padding: 0px 30px;
+}
+
+.background-container h2 {
+    padding-top: 40px;
+}
+
+.background-container img {
+    padding-bottom: 40px;
+    margin-top: 50px;
+}

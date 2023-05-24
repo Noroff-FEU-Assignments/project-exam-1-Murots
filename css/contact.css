@@ -1,0 +1,80 @@
+/* Contact
+--------------------------------------------------------------------------------------------------- */
+
+.contact-welcome {
+    margin: 30px;
+}
+
+.contact  {
+    max-width: 500px;
+    width: 90%;
+    margin: 20px auto 30px auto;
+    display: grid;
+}
+
+.contact__form {
+    display: grid;
+    grid-template-rows: 30px 30px 30px 30px 120px ;
+    grid-gap: 40px;
+}
+
+.contact__form input,
+.contact__form textarea {
+    border-radius: 6px;
+    border-color: var(--color-lightGray);
+    border-style: solid;
+    border-width: 0.7px;
+    font-family: var(--text-paragraph), Verdana, Geneva, Tahoma;
+}
+
+.contact__form input {
+    height: 30px;
+    width: 100%;
+}
+
+.contact__form textarea {
+    height: 120px;
+    width: 100%;
+}
+
+.submit-button {
+    margin: 25px; 
+    width: 150px;
+    height: 35px;
+    justify-self: center;
+    background-color: var(--color-ctaGreen);
+    border-style: none;
+    border-radius: 7px;
+    color: #fff;
+    font-family: var(--text-heading), Verdana, Geneva, Tahoma; 
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.submit-button:hover,
+.contact__form input:hover,
+.contact__form textarea:hover {
+    box-shadow: 0 0 2px 2px rgba(77, 97, 40, 0.5);
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.submit-button:active {
+    background-color: #4d6128;
+}
+
+.form-error {
+    color: #bd0000;
+    display: none;
+}
+
+.success {
+    background-color: #c6f7c6;
+    padding: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #008000;
+    max-width: 500px;
+}
