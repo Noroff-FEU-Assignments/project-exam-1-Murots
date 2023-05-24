@@ -19,23 +19,6 @@
     left: 0px;
     background-color: rgba(0, 0, 0, 0.4);
 }
-  
-.slide-image {
-    max-width: 100%;
-    flex-shrink: 0;
-    height: 100vh;
-    margin-bottom: 5px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    scroll-snap-align: start;
-    scroll-behavior: smooth;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .slide-textContent {
     position: absolute;
