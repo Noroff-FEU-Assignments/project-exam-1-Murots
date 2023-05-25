@@ -1,14 +1,12 @@
 /* About
 -------------------------------------------------------------------------------------------------- */
 
-.about-container img {
+.aboutImg-container img {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 100%;
-    height: auto;
-    max-height: 100vh;
+    max-height: 80vh;
+    padding-bottom: 40px;
+    margin-top: 40px;
 }
 
 .about-container h2 {
@@ -16,16 +14,13 @@
 }
 
 .background-container {
+    width: 100%;
     background-color: var(--color-divider);
     margin: 0px -30px;
     padding: 0px 30px;
 }
 
-.background-container h2 {
+.about-content2 h2 {
     padding-top: 40px;
 }
 
-.background-container img {
-    padding-bottom: 40px;
-    margin-top: 50px;
-}
