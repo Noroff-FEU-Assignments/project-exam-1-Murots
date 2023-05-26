@@ -29,9 +29,10 @@ async function createPostListHTML(post) {
 
         const blogId = post.id;
         const blogListImage = featuredImage.source_url;
-
+        
         const blogContainer = document.createElement("a");
-        blogContainer.className = "blog-container";
+        blogContainer.classList.add("blog-container");
+        blogContainer.classList.add("featuredImage-" + featuredImageId); 
         blogContainer.style.backgroundImage = `url(${blogListImage})`;
         blogContainer.setAttribute("alt", featuredImage.alt_text);
         blogContainer.href = "blogDetails.html?id=" + blogId;

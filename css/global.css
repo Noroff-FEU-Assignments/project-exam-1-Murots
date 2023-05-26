@@ -34,11 +34,13 @@ h3,
 h4,
 p,
 a,
-li {
+li,
+.desktop-menu a {
     font-family: var(--text-paragraph), Verdana, Geneva, Tahoma;
 }
 
-h3 {
+h3,
+.desktop-menu a {
     font-size: 0.9375em;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -134,12 +136,34 @@ li {
     transform: translateX(-50%);
 }
 
-.nav-heading {
+.nav-heading,
+.desktop-link1 {
     color: #ffffff;
 }
 
-.nav-heading2 {
+.nav-heading2,
+.desktop-link2 {
     color: var(--color-footerGrey);
+}
+
+.desktop-link1:hover,
+.desktop-link2:hover,
+.desktop-menu img:hover {
+    transform: scale(1.1);
+}
+
+.desktop-menu img {
+    transform: translateY(2px);
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.desktop-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px;
 }
 
 .slide-image {

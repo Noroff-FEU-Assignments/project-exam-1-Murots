@@ -64,6 +64,7 @@
 .blog-container:hover {
     cursor: pointer;
     box-shadow: 0 0 2px 2px rgba(77, 97, 40, 0.5);
+    transform: scale(1.01);
 }
 
 .loadMore-button:active {

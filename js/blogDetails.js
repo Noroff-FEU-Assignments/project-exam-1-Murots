@@ -40,7 +40,8 @@ async function createPostDetailsHTML(postDetails) {
         const featuredContainer = document.querySelector(".featured-container");
 
         const bannerImage = document.createElement("div");
-        bannerImage.className = "slide-image";
+        bannerImage.classList.add("slide-image");
+        bannerImage.classList.add("featuredImage-" + featuredImageId); 
         bannerImage.style.backgroundImage = `url(${postFeaturedImage})`;
         bannerImage.setAttribute("alt", featuredImage.alt_text);
         featuredContainer.append(bannerImage);

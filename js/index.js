@@ -30,10 +30,11 @@ async function createSliderHTML(latestPost) {
         const slideImage = featuredImage.source_url;
 
         const slide = document.createElement("div");
-        slide.className = "slide-image";
+        slide.classList.add("slide-image");
+        slide.classList.add("featuredImage-" + featuredImageId); 
         slide.style.backgroundImage = `url(${slideImage})`;
         slide.setAttribute("alt", featuredImage.alt_text);
-        slider.append(slide);
+        slider.append(slide);   
 
         const slideTextContent = document.createElement("div");
         slideTextContent.className = "slide-textContent";
