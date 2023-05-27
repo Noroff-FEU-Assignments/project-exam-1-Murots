@@ -45,7 +45,7 @@ async function createSliderHTML(latestPost) {
         slideTextLatest.innerText = "Latest posts:";
         slideTextContent.append(slideTextLatest);
 
-        const slideTitle = document.createElement("h1");
+        const slideTitle = document.createElement("h3");
         slideTitle.className = "slide-title";
         slideTitle.innerText = latestPost.title.rendered;
         slideTextContent.append(slideTitle);
