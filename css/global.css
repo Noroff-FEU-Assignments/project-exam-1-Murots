@@ -146,10 +146,9 @@ li {
     color: var(--color-footerGrey);
 }
 
-.desktop-link1:hover,
-.desktop-link2:hover,
-.desktop-menu img:hover {
+.desktop-menu a:hover {
     transform: scale(1.1);
+    transition: 0.15s;
 }
 
 .desktop-menu img {
