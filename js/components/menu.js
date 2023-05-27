@@ -16,7 +16,7 @@ hamburgerMenu.addEventListener("click", function() {
 
         const navLink2 = document.createElement("a");
         navLink2.href = "../../blogList.html";
-        navLink2.innerText = "BLOGS";
+        navLink2.innerText = "BLOG";
         menuContainer.append(navLink2);
 
         const navLink3 = document.createElement("a");

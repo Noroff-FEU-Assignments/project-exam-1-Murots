@@ -63,7 +63,7 @@
 .blog-content video,
 .blog-content img {
     width: 100%;
-    max-width: 700px;
+    /* max-width: 700px; */
     height: auto;
     margin-bottom: -10%;
 }
@@ -83,8 +83,8 @@
     height: auto;
     object-fit: contain;
     z-index: 100;
-    /* max-width: 80vw;
-    max-height: 80vh; */
+    max-width: 85vw;
+    max-height: 85vh;
 }
   
 .fullscreen-active {

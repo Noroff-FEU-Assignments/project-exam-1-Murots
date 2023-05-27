@@ -63,7 +63,7 @@ async function createPostDetailsHTML(postDetails) {
 
         const images = blogContent.querySelectorAll("img");
         const videos = blogContent.querySelectorAll("video");
-  
+
         images.forEach(function(image) {
             image.addEventListener("click", function() {
                 image.classList.toggle("fullscreen");
@@ -71,6 +71,14 @@ async function createPostDetailsHTML(postDetails) {
                 if (image.classList.contains("fullscreen")) {
                     overlay.style.display = "block";
                 } else {
+                    overlay.style.display = "none";
+                }
+            });
+          
+            overlay.addEventListener("click", function() {
+                if (image.classList.contains("fullscreen")) {
+                    image.classList.remove("fullscreen");
+                    document.body.classList.remove("fullscreen-active");
                     overlay.style.display = "none";
                 }
             });
@@ -86,7 +94,15 @@ async function createPostDetailsHTML(postDetails) {
                     overlay.style.display = "none";
                 }
             });
-        });
+          
+            overlay.addEventListener("click", function() {
+                if (video.classList.contains("fullscreen")) {
+                    video.classList.remove("fullscreen");
+                    document.body.classList.remove("fullscreen-active");
+                    overlay.style.display = "none";
+                }
+            });
+        });  
     } catch (error) {
         console.error(error);
         loaderDiv.remove();
