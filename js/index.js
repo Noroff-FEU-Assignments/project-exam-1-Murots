@@ -11,7 +11,6 @@ async function getLatestPosts() {
     try {
         const response = await fetch(fullLatestPostsURL);
         const latestPosts = await response.json();
-        console.log(latestPosts);
         return latestPosts;
     } catch (error) {
         console.error(error);
@@ -146,7 +145,6 @@ async function createSliderHTML(latestPost) {
 function createLatestPostsHTML(latestPosts) {
     for (let i = 0; i < latestPosts.length; i++) {
         const latestPost = latestPosts[i];
-        console.log(latestPost);
         createSliderHTML(latestPost);
     }
 }

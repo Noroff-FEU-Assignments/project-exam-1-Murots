@@ -12,7 +12,6 @@ async function getPosts() {
     try {
         const response = await fetch(pageURL);
         const posts = await response.json();
-        console.log(posts);
         return posts;
     } catch (error) {
         console.error(error);
@@ -60,7 +59,6 @@ async function createPostListHTML(post) {
 function createPostsHTML(posts) {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
-        console.log(post);
         createPostListHTML(post);
     }
 }
@@ -73,7 +71,6 @@ async function loadMorePosts() {
 
         const response = await fetch(nextPageURL);
         const posts = await response.json();
-        console.log(posts);
         createPostsHTML(posts);
 
         if (posts.length < 10) {

@@ -7,7 +7,6 @@ let menuContainer = null;
 hamburgerMenu.addEventListener("click", function() {
     if (!menuContainer) {
         menuContainer = document.createElement("div");
-        // sliderContainer.append(menuContainer);
 
         const navLink1 = document.createElement("a");
         navLink1.href = "../../index.html";
@@ -48,7 +47,6 @@ hamburgerMenu.addEventListener("click", function() {
         menuContainer.remove();
         menuContainer = null;
     }
-    console.log(menuContainer);
     
 });
 
