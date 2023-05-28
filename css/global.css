@@ -16,7 +16,8 @@ main {
 
 h1, 
 h2,
-h5 {
+h5,
+.h1-alt2 {
     font-family: var(--text-heading), Verdana, Geneva, Tahoma;
     letter-spacing: 0.10em; 
 }
@@ -31,6 +32,8 @@ h2,
 .h1-alt2 {
     font-size: 1.25em;
     font-weight: 500;
+    color: var(--color-darkGrey);
+    text-transform: uppercase;
 }
 
 h3,
@@ -38,12 +41,14 @@ h4,
 p,
 a,
 li,
-.desktop-menu a {
+.desktop-menu a,
+.h1-alt3 {
     font-family: var(--text-paragraph), Verdana, Geneva, Tahoma;
 }
 
 h3,
-.desktop-menu a {
+.desktop-menu a,
+.h1-alt3 {
     font-size: 0.9375em;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -61,6 +66,11 @@ li {
     font-weight: 300;
     letter-spacing: 0.03em;
     color: var(--color-darkGrey);
+}
+
+.h1-alt3 {
+    color: var(--color-darkGrey);
+    margin: 30px 0px 0px 0px;
 }
 
 .noBanner-header {

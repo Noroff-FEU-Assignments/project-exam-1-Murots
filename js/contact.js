@@ -9,7 +9,7 @@ const formMessage = document.querySelector("#message");
 const formMessageError = document.querySelector("#message-error");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#email-error");
-const guide = document.querySelector(".contact-welcome");
+const guide = document.querySelector(".success-message");
 
 function validateForm(event) {
     event.preventDefault();

@@ -74,7 +74,6 @@
     }
 
     .introduction {
-        text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 100px;
@@ -100,6 +99,10 @@
         margin-bottom: -10%;
     }
 
+    .h1-alt3 {
+        margin: 50px 0px 0px 0px;
+    }
+
     .blogList-container {
         max-width: 1000px;
         margin-left: auto;
@@ -107,7 +110,7 @@
         padding: 0px 30px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .blog-content,
@@ -116,11 +119,17 @@
     }
 
     .blogDetails-title,
-    .introduction {
+    .introduction,
+    .h1-alt3 {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
         padding: 0px 30px;
+    }
+
+    .welcome-message {
+        margin-left: 0px;
+        padding: 0px;
     }
 
     .block1,
@@ -143,7 +152,7 @@
     .block3 p,
     .block3 ul,
     .inner-block,
-    .about-container h2,
+    .about-container h1,
     .about-container p {
         grid-column: 1;
     }
@@ -170,7 +179,7 @@
     }
 
     .inner-block h2,
-    .about-content2 h2 {
+    .about-content2 h1 {
         margin: 0px;
     }
 

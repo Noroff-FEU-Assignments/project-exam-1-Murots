@@ -1,10 +1,6 @@
 /* Contact
 --------------------------------------------------------------------------------------------------- */
 
-.contact-welcome {
-    margin: 30px;
-}
-
 .contact  {
     max-width: 500px;
     width: 90%;
@@ -38,7 +34,7 @@
 }
 
 .submit-button {
-    margin: 25px; 
+    margin: 15px; 
     width: 150px;
     height: 35px;
     justify-self: center;
@@ -77,4 +73,5 @@
     border-width: 2px;
     border-color: #008000;
     max-width: 500px;
+    margin: 0px;
 }

@@ -42,7 +42,7 @@ async function createPostListHTML(post) {
         TextContent.className = "blogContainer-textContent";
         blogContainer.append(TextContent);
 
-        const blogTitle = document.createElement("h1");
+        const blogTitle = document.createElement("h5");
         blogTitle.className = "blogContainer-title";
         blogTitle.innerText = post.title.rendered;
         TextContent.append(blogTitle);
