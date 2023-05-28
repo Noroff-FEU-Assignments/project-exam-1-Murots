@@ -46,6 +46,10 @@
     margin: 5px 30px;
 }
 
+.blogContainer-title {
+    font-size: 1.2em;
+}
+
 .loadMore-button {
     margin: 25px auto 0px auto;
     display: block;
