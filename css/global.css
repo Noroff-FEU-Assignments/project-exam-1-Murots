@@ -15,17 +15,20 @@ main {
 }
 
 h1, 
-h2 {
+h2,
+h5 {
     font-family: var(--text-heading), Verdana, Geneva, Tahoma;
     letter-spacing: 0.10em; 
 }
 
-h1 {
+h1,
+h5 {
     font-size: 1.625em;
     font-weight: 600;
 }
 
-h2 {
+h2,
+.h1-alt2 {
     font-size: 1.25em;
     font-weight: 500;
 }
